@@ -1,0 +1,53 @@
+GET http://localhost:5000/api/v1/user/
+
+###
+POST http://localhost:5000/api/v1/auth/register
+Content-Type: application/json
+
+{
+    "email": "admin3@gmail.com",
+    "password": "123456"
+}
+
+###
+POST http://localhost:5000/api/v1/auth/login
+Content-Type: application/json
+
+{
+    "email": "admin3@gmail.com",
+    "password": "123456"
+}
+
+###
+GET http://localhost:5000/api/v1/user/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJhZG1pbjNAZ21haWwuY29tIiwicm9sZV9jb2RlIjoiUjMiLCJpYXQiOjE2ODkwNDI1NDcsImV4cCI6MTY4OTA0MjU1Mn0.ol6nszH3-kutvKsFq2aE1WxBzjsleDCbXjP255WbgO8
+
+###
+GET http://localhost:5000/api/v1/insert/
+
+###
+################ pagination, sort, filter #######################
+###
+GET http://localhost:5000/api/v1/book/
+
+###
+GET http://localhost:5000/api/v1/book/?name=passion
+
+###
+GET http://localhost:5000/api/v1/book/?order[]=price&order[]=DESC
+
+###
+GET http://localhost:5000/api/v1/book/?order[]=price&order[]=DESC&limit=2
+
+###
+GET http://localhost:5000/api/v1/book/?order[]=price&order[]=DESC&limit=2&page=2
+
+###
+GET http://localhost:5000/api/v1/book/?available=1
+
+###
+GET http://localhost:5000/api/v1/book/?available[]=5&available[]=10
+
+###
+POST http://localhost:5000/api/v1/book/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NywiZW1haWwiOiJhZG1pbjFAZ21haWwuY29tIiwicm9sZV9jb2RlIjoiUjEiLCJpYXQiOjE2ODg5MjE1NzQsImV4cCI6MTY4OTM1MzU3NH0.-uIK4qYRXdFjnPhXg9Kb2V_GOfukuEsa4pQ39CNR_NY
